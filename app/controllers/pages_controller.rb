@@ -4,10 +4,6 @@ class PagesController < ApplicationController
        
    end
    
-   
-   def a
-        
-   end
-    
+
     
 end
