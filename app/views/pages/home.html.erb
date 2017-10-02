@@ -1,4 +1,11 @@
 <div class="controller">
 <h1>Hello Home</h1>    
+
+<%= link_to 'sign_up', new_user_registration_path  %>
+<%= link_to 'sign_in', new_user_session_path  %>
+<%= link_to 'sign_out', destroy_user_session_path, method: :delete  %>
+
+<%=   Date.today.strftime("%A/%m/%Y") %><br>
+<%=   Date.today.strftime("%e %B %Y") %>
 </div>
 
