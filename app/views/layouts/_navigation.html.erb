@@ -1,7 +1,7 @@
-
 <br>
+
       <!-- Static navbar -->
-    <div class="container">
+  
       <nav class="navbar navbar-default">
         <div class="container-fluid">
           <div class="navbar-header">
@@ -13,19 +13,20 @@
             </button>
             <%= link_to 'AirBnD', root_path, { :class=>"navbar-brand" } %>
           </div>
-          <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-right">
-              <li class="active"><%= link_to 'Home', root_path   %></li>
-              <li><%= link_to 'About', about_path   %></li>
-              <li><%= link_to 'Contact', contact_path  %></li>
-              <% if (!user_signed_in?) %>
-              <li class="dropdown">
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav navbar-right">
+                <li class="active"><%= link_to 'Home', root_path   %></li>
+                <li><%= link_to 'About', about_path   %></li>
+                <li><%= link_to 'Contact', contact_path  %></li>
+                <% if (!user_signed_in?) %>
+                <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Connexion <span class="caret"></span></a>
-             </ul>
-              <ul class="dropdown-menu">
-                 <li><%= link_to 'sign_up', new_user_registration_path  %></li>
-                  <li><%= link_to 'sign_in', new_user_session_path  %></li>
+                <ul class="dropdown-menu">
                     
+                   
+                       <li><%= link_to 'sign_up', new_user_registration_path  %></li>
+                      <li><%= link_to 'sign_in', new_user_session_path  %></li>
+               </li>        
                     <% else  %>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= current_user.email %> <span class="caret"></span></a>
@@ -40,4 +41,3 @@
           </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
       </nav>
-     </div>
