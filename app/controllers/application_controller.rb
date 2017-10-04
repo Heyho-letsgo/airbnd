@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
     # Permit the `fullname` parameter along with the other
     # sign up parameters.
   devise_parameter_sanitizer.permit(:sign_up, keys: [:fullname])
-  devise_parameter_sanitizer.permit(:account_update, keys: [:fullname, :avatar])
+  devise_parameter_sanitizer.permit(:account_update, keys: [:fullname, :avatar, :phone, :description])
   end
   
   
