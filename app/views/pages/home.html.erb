@@ -3,6 +3,18 @@
 
 <% if (current_user) %>
    <%= current_user.email %>
+   <% if (current_user.fullname) %>
+   <%= current_user.fullname +  "  zzzz   " + request.original_url %>
+  
+      <% url = request.original_url%>
+      <br>
+      <%= "url = " + url %>
+      <% if url.include? "c9" %>
+      <br> <b>C9</b>
+      <% else %>
+      <br> <b>Heroku</b>
+      <%end%>
+   <% end %>
 <% else %>
 
 <% end %>
