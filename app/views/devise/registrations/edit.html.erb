@@ -1,13 +1,26 @@
 
 <div class="row">
-  <div class=" col-md-5 col-md-offset-3 text-center">
+  
+  
+  <div class="col-md-3 text-center">
+  
+  <button type="button" class="btn btn-secondary btn-block"><%= link_to "Voir mon Profile", user_path(@user)   %></button>
+
+
+  </div>
 
 
 
-<h2>Modifier mon profil.</h2>
-
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= devise_error_messages! %>
+  <div class=" col-md-9 col-md-offset-3 text-center">
+    <div class="panel panel-default">
+      <div class="panel-heading">Edition de mon profile</div>
+      
+      <div class="panel-body">
+        
+        <!--  https://www.synbioz.com/blog/comprendre_le_form_for_de_rails   -->
+        
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+        <%= devise_error_messages! %>
 
 
   <div class="form-group">
@@ -18,9 +31,35 @@
     <%= f.email_field :email, autofocus: true, class:"form-control", placeholder:"Saisissez votre email" %>
   </div>
 
-   <div class="form-group">
-    <%= f.file_field :avatar %>
+<!--  Ammélioration du bouton upload UploadField via scss   -->
+<div class="row">
+ 
+      <div class="col-md-3">
+ 
+              <div class="form-group">
+ 
+                   <span class="btn btn-default btn-file">
+ 
+                        Upload ma photo
+ 
+                        <%= f.file_field :avatar %>
+ 
+                   </span>
+ 
+               </div>
+ 
+        </div>  
+ 
+ </div>
+  
+     <div class="form-group">
+    <%= f.text_field :phone, class:"form-control",placeholder:"Numéro de téléphone" %>
   </div>
+
+     <div class="form-group">
+  <%= f.text_area :description, rows:3 , col:25, class:"form-control", placeholder:"Description" %>
+  </div>
+
 
   <div class="form-group">
   
@@ -45,8 +84,22 @@
 
   <div class="actions">
     <%= f.submit "Valider la modification de mon profil.", class: "btn ntn-primary" %>
+    
+
+    
+    
+    
+    
   </div>
 <% end %>
+        
+      </div>
+    </div>
+    
+    
+    
+
+
 
 
   </div>
