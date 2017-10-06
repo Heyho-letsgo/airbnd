@@ -15,14 +15,22 @@ class RoomsController < ApplicationController
     end
     
     def create
-        @room = current_user.room.build(room_params)
-        if 
-            @room.save
-            redirect_to @room, notice:"Votre annonce a été ajoutée avec succès :-)"
-        else
-            render:new
-        end
+ 
+      @room = current_user.rooms.build(room_params)
+ 
+      if @room.save
+ 
+            redirect_to @room, notice:"Votre annonce a été ajouté avec succès" 
+ 
+      else
+ 
+           render :new
+ 
+      end
+      
     end
+ 
+ 
     
     def show
         
@@ -50,10 +58,13 @@ private
     end
     
     def room_params
-       params.require(:rooms).permit(:home_type, :room_type, :accommodate,
-       :bed_room, :bath_room, :listing_name,:sumary, :adress, :is_wifi, 
+       params.require(:room).permit(:home_type, :room_type, :accommodate,
+       :bed_room, :bath_room, :listing_name, :sumary, :adress, :is_wifi, 
        :is_tv, :is_closet, :is_shampoo, :is_breakfast, :is_heating, 
-       :is_air, :is_kitchen, :price, :is_active)
+       :is_air, :is_kitchen ,:price, :is_active)
       
     end
 end
+
+
+
