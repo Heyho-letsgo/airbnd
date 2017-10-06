@@ -1,1 +1,0 @@
-rails g model Room home_type:string room_type:string accommodate:integer bed_room:integer bath_room:integer listing_name:string sumary:text adress:string is_wifi:boolean is_tv:boolean is_closet:boolean is_shampoo:boolean is_breakfast:boolean is_heating:boolean is_air:boolean is_kitchen:boolean price:integer is_active:boolean user:references
