@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get '/contact' => 'pages#contact'
 
   resources :users, only: [:show]
+  resources :rooms
 
  
 

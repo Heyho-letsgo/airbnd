@@ -11,7 +11,7 @@ class RoomsController < ApplicationController
     end
     
     def new # prepare et ouvre le formulaire rooms/new
-        @room = current_user.room.build
+        @room = current_user.rooms.build
     end
     
     def create
