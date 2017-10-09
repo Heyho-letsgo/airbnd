@@ -38,7 +38,7 @@ class RoomsController < ApplicationController
  
     
     def show
-        @phothos = @room.photos
+        @photos = @room.photos
         
     end
     
@@ -58,7 +58,7 @@ class RoomsController < ApplicationController
         end    
         @photos = @room.photos
             
-            redirect_to edith_room_path(@room), notice:"Votre annonce a été modifiée avec 
+            redirect_to edit_room_path(@room), notice:"Votre annonce a été modifiée avec 
             succès :-)"
         else
             render:edit
