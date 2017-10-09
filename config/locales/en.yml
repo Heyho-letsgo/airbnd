@@ -15,7 +15,7 @@ fr:
             home_type:
     attributes:
         room:
-            price: "Le prix"
+            price: "Le prix par nuit"
             address:  "L'adresse" 
             sumary: "La description"
             listing_name: "Le nom de l'annonce"
