@@ -4,25 +4,26 @@
     <%= @photos.each do |photo|  %>
     <div class="col-md-4">
       <div class="panel panel-default">
-        <div class="panel-heading preview"><%= image_tag photo.image.url() %> </div>
-<div class="panel-body">
- 
-      <span class="pull-right">
- 
-              <%= link_to photo, remote: true, method: :delete, data: 
-                   {confirm: "Certain de vouloir supprimer cette photo?"} do %>  
-#on ajoute remote: true pour faire appel au fichier jquery que l’on a ajouté !
- 
-               <i class="fa fa-times fa-lg"></i>
- 
-               <% end %>
- 
-     </span>
- 
- </div>
+        <div class="panel-heading preview"><%= image_tag photo.image.url(), size: "128x128" %> </div>
+            <div class="panel-body">
+             
+                  <span class="pull-right">
+             
+                          <%= link_to photo, remote: true, method: :delete, data: 
+                               {confirm: "Certain de vouloir supprimer cette photo?"} do %>  
+                           <i class="fa fa-times fa-lg"></i>
+             
+                           <% end %>
+             
+                 </span>
+             
+             </div>
+             
+            </div>
         </div>
+        <% end %>    
       </div>
-    <% end %>
-    </div>
+    
+
 
 <% end %>
