@@ -1,1 +1,37 @@
-<h2>rooms/show</h2>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <!-- Photo principale de l'annonce -->
+    <div class="row">
+      <div class="col-md-12">
+        <%= image_tag @photos[0].image.url(), class: "img-responsive" if @photos.length > 0 %>
+      </div>
+    </div>
+    <!-- Informations principales    -->
+    <div class="row">
+      <div class="col-md-2">
+        <div class="row">
+          image.user
+        </div>
+        <div class="row">
+          name.user
+        </div>
+      </div>
+      <div class="col-md-10">
+        <div class="row">
+          titre annonce
+        </div>
+        <div class="row">
+          Adresse
+        </div>
+        <div class="row">
+          <div class="col-md-3">log04</div>
+          <div class="col-md-3">log04</div>
+          <div class="col-md-3">log04</div>
+          <div class="col-md-3">log04</div>
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+</div>
