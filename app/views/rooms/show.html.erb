@@ -67,7 +67,9 @@
                 <!-- Formulaire de réservation -->
                 <button type="button" class="btn btn-primary btn-block">Résever</button>
                 <% if user_signed_in? %>
-                <button type="button" class="btn btn-secondary btn-block">MAJ</button>
+                
+                <%=link_to "Maj", edit_room_path, class:"btn btn-success btn-block" %>
+               
                 <% end %>
             </div> 
     </div>
