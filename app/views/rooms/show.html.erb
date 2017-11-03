@@ -65,11 +65,18 @@
             </div>
       <div class="col-md-4">
                 <!-- Formulaire de réservation -->
-                <button type="button" class="btn btn-primary btn-block">Résever</button>
+                
+                <%= @room.price %>
+        
+                <%= render 'reservations/form' %>  
+                
+               <%= link_to "Voir mes annonces ", rooms_path    %> <br>   
                 <% if user_signed_in? %>
+                 <%= link_to "Voir mes annonces ", rooms_path    %> <br>   
+                <%= link_to "Modif", edit_room_path(@room) %>
                 <button type="button" class="btn btn-secondary btn-block">MAJ</button>
                 <% end %>
-            </div> 
+      </div> 
     </div>
         <!-- Description -->
     <div class="row">

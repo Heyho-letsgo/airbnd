@@ -1,7 +1,14 @@
-<% form_for([@room, @room.reservation.new]) do |f| %>
+<%= form_for([@room, @room.reservations.new]) do |f| %>
 
+  <%= f.text_field :start_date   %>
+  <%= f.text_field :end_date   %>
+  
+  <%= f.hidden_field :room_id, value: @room.id    %>
+  <%= f.hidden_field :price, value: @room.price %>
+  
+  <br><br>
 
-
+  <%= f.submit "Demande de reservation", class: "btn btn-primary"  %>
 
 
 <% end %>
