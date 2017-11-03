@@ -36,6 +36,10 @@ gem 'font-awesome-sass'
 # Paperclip-Cloudinary
 gem 'paperclip-cloudinary'
 
+# gestion calendrier
+
+gem 'jquery-ui-rails'
+
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
